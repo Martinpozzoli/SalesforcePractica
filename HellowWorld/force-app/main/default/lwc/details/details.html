@@ -1,0 +1,16 @@
+<template>
+    <template if:true={product}>
+        <div class="container">
+            <div class="slds-text-heading_small">{product.Name}</div>
+            <div class="price">{product.Price}</div>
+            <div class="description">{product.Description}</div>
+            <img class="product-img" src={product.ImageUrl}></img>
+            <p>
+                <lightning-badge label={product.Material}></lightning-badge>
+            </p>
+        </div>
+        </template>
+        <template if:false={product}>
+        <div class="slds-text-heading_medium">Select a bike</div>
+        </template>
+</template>
